@@ -2,11 +2,11 @@
 
 This library serves as a Svelte alternative to the [FCL React Quick Start App found on the official Flow developer documentation](https://docs.onflow.org/fcl/tutorials/flow-app-quickstart/).
 
-## Why?
+## Why?
 
-Svelte is awesome.
+Svelte is awesome, and porting something to another framework forces you to learn (and appreciate) the differences and similarities.
 
-## Significant Changes From the React version?
+## Significant Changes From the React version?
 
 Due to Svelte's cool functionality, I've re-arranged some of the project structure compared to the React app to make it more modular. For example:
 
