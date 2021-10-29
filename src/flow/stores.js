@@ -1,4 +1,5 @@
 import { writable } from 'svelte/store';
 
-export let user = writable(null);
-export let profile = writable(null);
+export const user = writable(null);
+export const profile = writable(null);
+export const transactionStatus = writable(null);
