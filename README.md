@@ -8,8 +8,6 @@ Svelte is awesome, and porting something to another framework forces you to lear
 
 ## Significant Changes From the React version?
 
-Due to Svelte's cool functionality, I've re-arranged some of the project structure compared to the React app to make it more modular. For example:
-
 - Flow authentication is handled via the `Auth.svelte` component
 - Uses `.env` variables
 - Instead of React's setState/useState, I've used Svelte stores.
