@@ -11,6 +11,7 @@ Svelte is awesome.
 Due to Svelte's cool functionality, I've re-arranged some of the project structure compared to the React app to make it more modular. For example:
 
 - Flow authentication is handled via the `Auth.svelte` component
+- Uses `.env` variables
 - Instead of React's setState/useState, I've used Svelte stores.
 - All Flow related JS files are in a separate folder (config, actions and stores)
   - All authentication actions are in `actions.js`

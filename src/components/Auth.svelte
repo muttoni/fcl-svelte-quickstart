@@ -22,6 +22,7 @@
     padding:0.6em 1.2em;
     margin:0 0.3em 0.3em 0;
     border-radius:0.3em;
+    font-size:small;
     box-sizing: border-box;
     text-decoration:none;
     font-family:sans-serif;
@@ -33,29 +34,44 @@
     text-align:center;
     position:relative;
   }
-
+  
   button:active {
     top:0.1em;
   }
-
+  
   button:hover {
     cursor:pointer;
     background-color:#4a90e2;
   }
-
+  
   @media all and (max-width:30em){
     button {
       display:block;
       margin:0.4em auto;
     }
   }
+  
+  .led-green {
+    width: 16px;
+    height: 16px;
+    display:inline-block;
+    margin-right: 10px;
+    background-color: rgb(2, 255, 74);
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 4px 1px, inset #304701 0 -1px 9px, rgb(0, 255, 94) 0 2px 12px;
+  }
 </style>
 
 {#if $user?.loggedIn}
 <div>
-  <div>Address: <span class="mono">{$user?.addr ?? "No Address"}</span> <button on:click={unauthenticate}>Log Out</button></div>
+  <div>
+    <div class="led-green"></div>
+    <span class="mono">{$user?.addr ?? "No Address"}</span> <button on:click={unauthenticate}>Log Out</button>
+  </div>
   <div>Profile Name: {$profile?.name ?? "--"}</div>
   <div>Transaction Status: {$transactionStatus ?? "--"}</div> 
+  
+  <h2>Controls</h2>
   <button on:click={initAccount}>Init Account</button>
   <button on:click={() => sendQuery($user.addr)}>Send Query</button>
   <button on:click={executeTransaction}>Execute Transaction</button>
