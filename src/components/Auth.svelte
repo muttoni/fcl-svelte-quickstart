@@ -45,13 +45,13 @@
   }
 
   .led-green {
-    width: 16px;
-    height: 16px;
+    position:relative;
     display:inline-block;
-    margin-right: 10px;
-    background-color: rgb(2, 255, 74);
-    border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 4px 1px, inset rgb(0, 113, 41) 0 -1px 9px, rgb(0, 255, 94) 0 2px 12px;
+    top: -2px;
+    background-color: #72EA94;
+    width: 7px;
+    height: 7px;
+    border-radius: 7px;
   }
 </style>
 
