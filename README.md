@@ -2,6 +2,17 @@
 
 This library serves as a Svelte alternative to the [FCL React Quick Start App found on the official Flow developer documentation](https://docs.onflow.org/fcl/tutorials/flow-app-quickstart/).
 
+## How to use?
+
+```npm install```
+
+Then
+
+```npm run dev```
+
+(For publishing on external JAMSTACK providers use `npm run build`, although most providers do this automatically) 
+
+
 ## Why?
 
 Svelte is awesome, and porting something to another framework forces you to learn (and appreciate) the differences and similarities.
