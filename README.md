@@ -29,4 +29,3 @@ Svelte is awesome, and porting something to another framework forces you to lear
   - All authentication actions are in `actions.js`
   - All Flow-related stores are in `stores.js`
   - All configs are in `config.js`
-- More organized layout
