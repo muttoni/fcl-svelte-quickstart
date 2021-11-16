@@ -8,7 +8,9 @@ This library serves as a Svelte alternative to the [FCL React Quick Start App fo
 
 Then
 
-```npm run dev``` **note: depending on your CORS settings, local development may not work. Will experiment with SvelteKit and Vite to see if this fixes it.**
+```npm run dev```
+
+**note: depending on your CORS settings, localhost development may not work.** Will experiment with SvelteKit and Vite to see if this fixes it.
 
 (For publishing on external JAMSTACK providers use `npm run build`, although most providers do this automatically) 
 
