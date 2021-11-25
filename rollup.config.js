@@ -60,7 +60,13 @@ export default {
       browser: true,
       dedupe: ['svelte']
     }),
-    commonjs(),
+    commonjs({
+      namedExports:{
+          "@improbable-eng/grpc-web": ["grpc"],
+          "@onflow/protobuf": ["Transaction","SendTransactionRequest","AccessAPI", "GetTransactionRequest","ExecuteScriptAtBlockIDRequest","ExecuteScriptAtBlockHeightRequest","ExecuteScriptAtLatestBlockRequest","GetAccountAtBlockHeightRequest","GetAccountAtLatestBlockRequest","GetEventsForHeightRangeRequest","GetEventsForBlockIDsRequest","GetLatestBlockRequest","GetBlockByIDRequest","GetBlockByHeightRequest","GetBlockHeaderByIDRequest","GetBlockHeaderByHeightRequest","GetLatestBlockHeaderRequest","GetCollectionByIDRequest","PingRequest"]
+      }
+      
+  }),
     globals(),
 
     // In dev mode, call `npm run start` once
@@ -74,7 +80,7 @@ export default {
     // If we're building for production (npm run build
     // instead of npm run dev), minify
     production && terser()
-  ],
+  ], 
   watch: {
     clearScreen: false
   }
