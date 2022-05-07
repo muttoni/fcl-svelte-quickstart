@@ -61,7 +61,7 @@
     <div class="led-green"></div>
     <span class="mono">{$user?.addr ?? "No Address"}</span> <button on:click={unauthenticate}>Log Out</button>
   </div>
-  <div>Profile Name: {$profile?.name ?? "--"}</div>
+  <div>Profile Name: {$profile ?? "--"}</div>
   <div>Transaction Status: {$transactionStatus ?? "--"}</div> 
   
   <h2>Controls</h2>

@@ -41,7 +41,7 @@ export const initAccount = async () => {
       limit: 50
     })
     transaction = await fcl.tx(transactionId).onceSealed()
-    transactionStatus.set(transaction)
+    transactionStatus.set(transaction.status)
   } catch (e) {
     transactionStatus.set(e)
     console.log(e)
@@ -68,12 +68,14 @@ export const sendQuery = async (addr) => {
       `,
       args: (arg, t) => [arg(addr, t.Address)]
     })
+    profile.set(profileQueryResult?.name ?? 'No Profile');
+    transactionStatus.set('Profile queried successfully!')
+
   } catch(e) {
     transactionStatus.set(e)
     console.log(e);
   }
   
-  profile.set(profileQueryResult?.name ?? 'No Profile');
 }
 
 export const executeTransaction = async () => {
